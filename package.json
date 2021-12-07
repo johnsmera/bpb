@@ -8,20 +8,28 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "axios": "^0.24.0",
     "next": "12.0.5",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-dropzone": "^11.4.2",
+    "react-hook-form": "^7.20.5",
     "react-icons": "^4.3.1",
     "styled-components": "^5.3.3"
   },
   "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/json-server": "^0.14.4",
     "@types/node": "16.11.11",
     "@types/react": "17.0.37",
     "@types/react-dropzone": "^5.1.0",
+    "@types/react-icons": "^3.0.0",
     "@types/styled-components": "^5.1.16",
+    "@typescript-eslint/eslint-plugin": "^5.5.0",
     "eslint": "8.4.0",
     "eslint-config-next": "12.0.5",
+    "eslint-config-prettier": "^8.3.0",
+    "prettier": "^2.5.1",
     "typescript": "4.5.2"
   }
 }
