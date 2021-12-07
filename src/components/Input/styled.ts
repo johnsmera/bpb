@@ -12,6 +12,12 @@ export const Container = styled.div`
         font-weight: 500;
         font-size: 0.84rem;
     }
+
+    small {
+        font-weight: bold;
+        color: red;
+        font-size: 0.6rem;
+    }
 `;
 
 export const InputText = styled.input`
@@ -24,7 +30,9 @@ export const InputText = styled.input`
     padding: 0.8rem;
     color: ${semidark};
     font-size: 0.8rem;
-    
+    height: 3.2rem;
+
+
     ::-webkit-input-placeholder {
         opacity: 0.6;
     }

@@ -1,17 +1,40 @@
 import { InputText, Container } from './styled'
 
-type InputProps = {
-  readonly label: string;
-  readonly placeholder?: string;
+interface InputProps {
+  readonly label: string
+  readonly placeholder?: string
+  readonly defaultValue?: string
+  readonly name: string
+  readonly register?: any
+  readonly required?: boolean
+  readonly errors: {
+    [x: string]: any
+  }
 }
 
-const Input: React.FC<InputProps> = ({ label, placeholder }) => {
+const Input: React.FC<InputProps> = ({
+  label,
+  placeholder,
+  name,
+  register,
+  required,
+  errors,
+  ...props
+}) => {
   return (
     <Container>
       <span>
         {label}
+        {errors[name] && errors[name].type === 'required' && (
+          <small> Obrigatório</small>
+        )}
       </span>
-      <InputText placeholder={placeholder || label} />
+      <InputText
+        type="text"
+        {...register(name, { required })}
+        placeholder={placeholder || label}
+        {...props}
+      />
     </Container>
   )
 }
